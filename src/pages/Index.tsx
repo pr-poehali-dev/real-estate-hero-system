@@ -9,7 +9,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-[#fafafa]">
       <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1A1F2C] to-[#2d3548] text-white px-6 py-20">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-8 animate-fade-in">
@@ -44,7 +44,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-20 px-6 bg-gray-50">
+      <section id="about" className="py-20 px-6 bg-[#f5f5f7]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
             Кто ведёт мини-курс и почему мне можно доверять
@@ -98,7 +98,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
             Почему старые методы больше не работают в 2026 году
@@ -126,7 +126,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="course" className="py-20 px-6 bg-gray-50">
+      <section id="course" className="py-20 px-6 bg-[#f5f5f7]">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#1A1F2C]">
             Что ты получишь в мини-курсе
@@ -218,7 +218,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
             Чем мой подход отличается от остальных
@@ -279,7 +279,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gray-50">
+      <section className="py-20 px-6 bg-[#f5f5f7]">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="p-6 hover:shadow-xl transition-shadow">
@@ -307,7 +307,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#fafafa]">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#1A1F2C]">
             Хочешь ускориться?
@@ -451,7 +451,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-20 px-6 bg-[#fafafa]">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <h2 className="text-4xl md:text-5xl font-bold text-[#1A1F2C]">
             Этот мини-курс — первый шаг. Дальше начинается твоя система.
