@@ -1,11 +1,44 @@
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { Input } from '@/components/ui/input';
+import { Label } from '@/components/ui/label';
+import { Textarea } from '@/components/ui/textarea';
+import { useState } from 'react';
 import Icon from '@/components/ui/icon';
 
 const Index = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [dialogType, setDialogType] = useState<'course' | 'workbook' | 'consultation'>('course');
+  const [formData, setFormData] = useState({ name: '', phone: '', email: '', message: '' });
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const openDialog = (type: 'course' | 'workbook' | 'consultation') => {
+    setDialogType(type);
+    setIsDialogOpen(true);
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log('Заявка:', { type: dialogType, ...formData });
+    setIsDialogOpen(false);
+    setFormData({ name: '', phone: '', email: '', message: '' });
+  };
+
+  const dialogTitles = {
+    course: 'Получить бесплатный мини-курс',
+    workbook: 'Забрать рабочую тетрадь (790 ₽)',
+    consultation: 'Записаться на бесплатный разбор'
+  };
+
+  const dialogDescriptions = {
+    course: 'Оставьте заявку, и мы пришлём вам доступ к 5 урокам в Telegram',
+    workbook: 'Оставьте заявку для оплаты рабочей тетради с 32 инструментами',
+    consultation: 'Запишитесь на бесплатный разбор 60 минут с Оксаной'
   };
 
   return (
@@ -23,7 +56,7 @@ const Index = () => {
               Пройди бесплатный мини-курс из 5 уроков и собери фундамент своей системы продаж в 2026 году.
             </p>
             <Button 
-              onClick={() => scrollToSection('course')}
+              onClick={() => openDialog('course')}
               size="lg" 
               className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
             >
@@ -209,6 +242,7 @@ const Index = () => {
 
           <div className="text-center mt-12">
             <Button 
+              onClick={() => openDialog('course')}
               size="lg" 
               className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-10 py-6 rounded-full transition-all hover:scale-105"
             >
@@ -363,6 +397,7 @@ const Index = () => {
                 <div className="text-3xl font-bold text-[#9b87f5] mb-2">790 ₽</div>
                 <p className="text-sm text-gray-500 mb-4">(реальная ценность: 5–10 тысяч)</p>
                 <Button 
+                  onClick={() => openDialog('workbook')}
                   size="lg" 
                   className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg py-6 rounded-full transition-all hover:scale-105"
                 >
@@ -408,6 +443,7 @@ const Index = () => {
               </div>
 
               <Button 
+                onClick={() => openDialog('consultation')}
                 size="lg" 
                 className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-10 py-6 rounded-full transition-all hover:scale-105"
               >
@@ -459,7 +495,7 @@ const Index = () => {
           <p className="text-xl text-gray-600">Выбери, с чего начать:</p>
           <div className="flex flex-col md:flex-row gap-4 justify-center">
             <Button 
-              onClick={() => scrollToSection('course')}
+              onClick={() => openDialog('course')}
               size="lg" 
               variant="outline"
               className="border-[#9b87f5] text-[#9b87f5] hover:bg-[#9b87f5] hover:text-white text-lg px-8 py-6 rounded-full"
@@ -467,12 +503,14 @@ const Index = () => {
               Получить мини-курс
             </Button>
             <Button 
+              onClick={() => openDialog('workbook')}
               size="lg" 
               className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-8 py-6 rounded-full"
             >
               Забрать «32 инструмента»
             </Button>
             <Button 
+              onClick={() => openDialog('consultation')}
               size="lg" 
               className="bg-[#1A1F2C] hover:bg-[#2d3548] text-white text-lg px-8 py-6 rounded-full"
             >
@@ -503,6 +541,71 @@ const Index = () => {
           </div>
         </div>
       </footer>
+
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-[500px]">
+          <DialogHeader>
+            <DialogTitle className="text-2xl font-bold text-[#1A1F2C]">
+              {dialogTitles[dialogType]}
+            </DialogTitle>
+            <DialogDescription className="text-gray-600">
+              {dialogDescriptions[dialogType]}
+            </DialogDescription>
+          </DialogHeader>
+          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
+            <div className="space-y-2">
+              <Label htmlFor="name">Имя *</Label>
+              <Input
+                id="name"
+                placeholder="Ваше имя"
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="phone">Телефон *</Label>
+              <Input
+                id="phone"
+                type="tel"
+                placeholder="+7 (___) ___-__-__"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                required
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="email">Email</Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="your@email.com"
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="message">Комментарий</Label>
+              <Textarea
+                id="message"
+                placeholder="Расскажите о себе или задайте вопрос"
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                rows={3}
+              />
+            </div>
+            <Button
+              type="submit"
+              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg py-6 rounded-full"
+            >
+              Отправить заявку
+            </Button>
+            <p className="text-xs text-gray-500 text-center">
+              Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
+            </p>
+          </form>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
