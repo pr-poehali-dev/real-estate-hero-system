@@ -43,22 +43,22 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-[#fafafa]">
-      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1A1F2C] to-[#2d3548] text-white px-6 py-20">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#1A1F2C] to-[#2d3548] text-white px-4 md:px-6 py-12 md:py-20">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-12 items-center w-full">
+          <div className="space-y-6 md:space-y-8 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight">
               Система, в которой клиенты приходят сами.
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-300">
               Для риэлторов по новостройкам.
             </p>
-            <p className="text-lg text-gray-400">
+            <p className="text-base sm:text-lg text-gray-400">
               Пройди бесплатный мини-курс из 5 уроков и собери фундамент своей системы продаж в 2026 году.
             </p>
             <Button 
               onClick={() => openDialog('course')}
               size="lg" 
-              className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-8 py-6 rounded-full transition-all hover:scale-105"
+              className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-base sm:text-lg px-6 sm:px-8 py-5 sm:py-6 rounded-full transition-all hover:scale-105 w-full sm:w-auto"
             >
               Получить мини-курс
             </Button>
@@ -71,25 +71,25 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/7f3a33e4-a2fc-4bf4-838c-7571555a64b6.JPG" 
               alt="Оксана Никитюк"
-              className="rounded-2xl shadow-2xl"
+              className="rounded-2xl shadow-2xl w-full h-auto"
             />
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 px-6 bg-[#f5f5f7]">
+      <section id="about" className="py-12 md:py-20 px-4 md:px-6 bg-[#f5f5f7]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-[#1A1F2C]">
             Кто ведёт мини-курс и почему мне можно доверять
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <img 
               src="https://cdn.poehali.dev/files/34691445-afd3-443d-ac59-59c0059fd69d.JPG" 
               alt="Оксана за работой"
-              className="rounded-2xl shadow-xl"
+              className="rounded-2xl shadow-xl w-full h-auto"
             />
-            <div className="space-y-6">
-              <p className="text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                 <strong className="text-[#9b87f5]">Оксана</strong> — наставник риэлторов, эксперт по первичке и автор системы, 
                 которая помогает риэлторам работать спокойно, честно и стабильно зарабатывать 2–5 сделок в месяц.
               </p>
@@ -113,30 +113,30 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#9b87f5] text-white">
-        <div className="max-w-4xl mx-auto text-center space-y-6">
-          <div className="text-7xl font-bold mb-4">52</div>
-          <h3 className="text-3xl font-bold">Мой путь — не теория. Я прошла всё сама.</h3>
-          <p className="text-xl leading-relaxed">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-[#9b87f5] text-white">
+        <div className="max-w-4xl mx-auto text-center space-y-4 md:space-y-6">
+          <div className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4">52</div>
+          <h3 className="text-2xl sm:text-3xl font-bold">Мой путь — не теория. Я прошла всё сама.</h3>
+          <p className="text-lg sm:text-xl leading-relaxed">
             За один период я закрыла <strong>52 квартиры в новостройках</strong>.
           </p>
-          <p className="text-lg opacity-90 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg opacity-90 max-w-3xl mx-auto">
             Не потому что бегала сутками по показам. А потому что выстроила систему: 
             честная работа с клиентами, партнёрская модель, личный бренд, 
             доверие, которое не нужно продавать.
           </p>
-          <p className="text-lg font-semibold">
+          <p className="text-base sm:text-lg font-semibold">
             Эта система работает и в 2026 году — и именно её я передаю своим ученикам и в мини-курсе.
           </p>
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#fafafa]">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-[#1A1F2C]">
             Почему старые методы больше не работают в 2026 году
           </h2>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-4 md:gap-8">
             {[
               { icon: 'User', text: 'Клиенты выбирают не цену — а человека' },
               { icon: 'XCircle', text: 'Скрипты, дожимы и манипуляции вызывают отторжение' },
@@ -145,32 +145,32 @@ const Index = () => {
               { icon: 'TrendingDown', text: 'Риэлтор-продавец проигрывает' },
               { icon: 'TrendingUp', text: 'Риэлтор-партнёр выигрывает' }
             ].map((item, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <Icon name={item.icon} className="text-[#9b87f5] flex-shrink-0" size={32} />
-                  <p className="text-lg text-gray-700">{item.text}</p>
+              <Card key={idx} className="p-4 md:p-6 hover:shadow-lg transition-shadow">
+                <div className="flex items-start gap-3 md:gap-4">
+                  <Icon name={item.icon} className="text-[#9b87f5] flex-shrink-0" size={24} />
+                  <p className="text-base md:text-lg text-gray-700">{item.text}</p>
                 </div>
               </Card>
             ))}
           </div>
-          <p className="text-center text-xl mt-12 text-gray-700">
+          <p className="text-center text-lg sm:text-xl mt-8 md:mt-12 text-gray-700">
             Чтобы расти в первичке, нужна новая модель — <strong className="text-[#9b87f5]">человеческая и системная</strong>.
           </p>
         </div>
       </section>
 
-      <section id="course" className="py-20 px-6 bg-[#f5f5f7]">
+      <section id="course" className="py-12 md:py-20 px-4 md:px-6 bg-[#f5f5f7]">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#1A1F2C]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 md:mb-6 text-[#1A1F2C]">
             Что ты получишь в мини-курсе
           </h2>
-          <p className="text-center text-xl text-gray-600 mb-12">
+          <p className="text-center text-lg sm:text-xl text-gray-600 mb-8 md:mb-12">
             5 коротких уроков, которые можно внедрять сразу
           </p>
           
-          <Accordion type="single" collapsible className="space-y-4">
-            <AccordionItem value="lesson-0" className="bg-white rounded-lg px-6 shadow-sm">
-              <AccordionTrigger className="text-lg font-semibold hover:text-[#9b87f5]">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
+            <AccordionItem value="lesson-0" className="bg-white rounded-lg px-4 md:px-6 shadow-sm">
+              <AccordionTrigger className="text-base md:text-lg font-semibold hover:text-[#9b87f5]">
                 <div className="flex items-center gap-3">
                   <span className="text-[#9b87f5]">📹</span>
                   Урок 0 — Вступление (живое видео)
@@ -240,11 +240,11 @@ const Index = () => {
             </AccordionItem>
           </Accordion>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-8 md:mt-12">
             <Button 
               onClick={() => openDialog('course')}
               size="lg" 
-              className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-10 py-6 rounded-full transition-all hover:scale-105"
+              className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-full transition-all hover:scale-105 w-full sm:w-auto"
             >
               🔵 Получить доступ к мини-курсу
             </Button>
@@ -252,12 +252,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#fafafa]">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-[#fafafa]">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-[#1A1F2C]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12 text-[#1A1F2C]">
             Чем мой подход отличается от остальных
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             {[
               'Партнёрская модель, а не «продажа любой ценой»',
               'Долгосрочные отношения с клиентом',
@@ -266,10 +266,10 @@ const Index = () => {
               'Контент, который приносит заявки',
               'Система рекомендаций, которая растёт сама'
             ].map((item, idx) => (
-              <Card key={idx} className="p-6 hover:shadow-lg transition-all hover:-translate-y-1">
+              <Card key={idx} className="p-4 md:p-6 hover:shadow-lg transition-all hover:-translate-y-1">
                 <div className="flex items-start gap-3">
                   <Icon name="Check" className="text-[#9b87f5] flex-shrink-0 mt-1" size={24} />
-                  <p className="text-gray-700">{item}</p>
+                  <p className="text-sm md:text-base text-gray-700">{item}</p>
                 </div>
               </Card>
             ))}
@@ -277,17 +277,17 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-[#9b87f5] to-[#7E69AB] text-white">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-[#9b87f5] to-[#7E69AB] text-white">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-8 md:mb-12">
             Результаты учеников, которые внедряют систему
           </h2>
-          <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-8">
-            <div className="space-y-6">
-              <p className="text-lg leading-relaxed">
+          <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6 md:p-8">
+            <div className="space-y-4 md:space-y-6">
+              <p className="text-base sm:text-lg leading-relaxed">
                 Моя ученица пришла без системы, без воронки, без личного бренда.
               </p>
-              <p className="text-lg">За один месяц внедрения мы:</p>
+              <p className="text-base sm:text-lg">За один месяц внедрения мы:</p>
               <ul className="space-y-3">
                 {[
                   'упаковали профиль',
@@ -301,9 +301,9 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-              <div className="text-center py-6">
-                <div className="text-5xl font-bold mb-2">1 000 000 ₽</div>
-                <p className="text-xl">дохода за первый месяц на новостройках</p>
+              <div className="text-center py-4 md:py-6">
+                <div className="text-4xl sm:text-5xl font-bold mb-2">1 000 000 ₽</div>
+                <p className="text-lg sm:text-xl">дохода за первый месяц на новостройках</p>
               </div>
               <p className="text-sm opacity-80 text-center italic">
                 Результаты индивидуальны. Но система работает у всех, кто её внедряет.
@@ -313,12 +313,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#f5f5f7]">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-[#f5f5f7]">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="p-6 hover:shadow-xl transition-shadow">
-              <Icon name="Users" className="text-[#9b87f5] mb-4" size={40} />
-              <p className="text-gray-700">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+            <Card className="p-4 md:p-6 hover:shadow-xl transition-shadow">
+              <Icon name="Users" className="text-[#9b87f5] mb-4" size={32} />
+              <p className="text-sm md:text-base text-gray-700">
                 Клиент пришёл "просто посмотреть", в итоге купил квартиру и привёл трёх друзей — 
                 из-за нормального человеческого подхода.
               </p>
@@ -341,22 +341,22 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-[#fafafa]">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-[#fafafa]">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-6 text-[#1A1F2C]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-4 md:mb-6 text-[#1A1F2C]">
             Хочешь ускориться?
           </h2>
-          <p className="text-2xl text-center mb-12 text-gray-700">
+          <p className="text-xl sm:text-2xl text-center mb-8 md:mb-12 text-gray-700">
             Забери мою рабочую тетрадь из <strong className="text-[#9b87f5]">32 инструментов риэлтора</strong> по первичке
           </p>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <img 
               src="https://cdn.poehali.dev/files/b0a8783d-afbc-48ab-a2f1-03c33268d16e.JPG" 
               alt="Рабочая тетрадь"
-              className="rounded-2xl shadow-xl"
+              className="rounded-2xl shadow-xl w-full h-auto"
             />
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <p className="text-lg text-gray-700">
                 Это не PDF «почитать». Это — <strong>система действий на каждый день</strong>.
               </p>
@@ -394,12 +394,12 @@ const Index = () => {
               </div>
 
               <div className="pt-4">
-                <div className="text-3xl font-bold text-[#9b87f5] mb-2">790 ₽</div>
+                <div className="text-2xl sm:text-3xl font-bold text-[#9b87f5] mb-2">790 ₽</div>
                 <p className="text-sm text-gray-500 mb-4">(реальная ценность: 5–10 тысяч)</p>
                 <Button 
                   onClick={() => openDialog('workbook')}
                   size="lg" 
-                  className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg py-6 rounded-full transition-all hover:scale-105"
+                  className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-base sm:text-lg py-5 sm:py-6 rounded-full transition-all hover:scale-105"
                 >
                   Забрать рабочую тетрадь (790 ₽)
                 </Button>
@@ -409,17 +409,17 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-20 px-6 bg-gradient-to-br from-[#1A1F2C] to-[#2d3548] text-white">
+      <section className="py-12 md:py-20 px-4 md:px-6 bg-gradient-to-br from-[#1A1F2C] to-[#2d3548] text-white">
         <div className="max-w-5xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h2 className="text-4xl md:text-5xl font-bold">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+            <div className="space-y-6 md:space-y-8">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
                 Готов работать иначе?
               </h2>
-              <p className="text-2xl">
+              <p className="text-xl sm:text-2xl">
                 Тогда тебе нужно наставничество 1 на 1
               </p>
-              <p className="text-lg text-gray-300">
+              <p className="text-base sm:text-lg text-gray-300">
                 Мы выстроим твою систему работы в первичке: спокойную, честную и предсказуемую.
               </p>
               
@@ -445,7 +445,7 @@ const Index = () => {
               <Button 
                 onClick={() => openDialog('consultation')}
                 size="lg" 
-                className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg px-10 py-6 rounded-full transition-all hover:scale-105"
+                className="bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-base sm:text-lg px-6 sm:px-10 py-5 sm:py-6 rounded-full transition-all hover:scale-105 w-full sm:w-auto"
               >
                 ⚡️ Записаться на бесплатный разбор (60 минут)
               </Button>
@@ -453,13 +453,13 @@ const Index = () => {
             <img 
               src="https://cdn.poehali.dev/files/003be071-dd5f-40e4-81b4-00685fa87a72.JPG" 
               alt="Наставничество"
-              className="rounded-2xl shadow-2xl"
+              className="rounded-2xl shadow-2xl w-full h-auto order-first md:order-last"
             />
           </div>
 
-          <div className="mt-16 grid md:grid-cols-2 gap-8">
-            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-6">
-              <h3 className="text-xl font-bold mb-4">Как проходит наставничество:</h3>
+          <div className="mt-12 md:mt-16 grid md:grid-cols-2 gap-6 md:gap-8">
+            <Card className="bg-white/10 backdrop-blur-sm border-white/20 p-4 md:p-6">
+              <h3 className="text-lg sm:text-xl font-bold mb-4">Как проходит наставничество:</h3>
               <ul className="space-y-3">
                 {[
                   '1 созвон в неделю',
@@ -520,11 +520,11 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="bg-[#1A1F2C] text-white py-12 px-6">
+      <footer className="bg-[#1A1F2C] text-white py-8 md:py-12 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center space-y-6">
-            <h3 className="text-2xl font-bold">Оксана Никитюк</h3>
-            <div className="flex justify-center gap-6">
+          <div className="text-center space-y-4 md:space-y-6">
+            <h3 className="text-xl sm:text-2xl font-bold">Оксана Никитюк</h3>
+            <div className="flex justify-center gap-4 md:gap-6 flex-wrap">
               <a href="#" className="hover:text-[#9b87f5] transition-colors flex items-center gap-2">
                 <Icon name="Send" size={20} />
                 Telegram
@@ -534,7 +534,7 @@ const Index = () => {
                 YouTube
               </a>
             </div>
-            <div className="flex justify-center gap-6 text-sm text-gray-400">
+            <div className="flex justify-center gap-4 md:gap-6 text-xs sm:text-sm text-gray-400 flex-wrap">
               <a href="#" className="hover:text-white transition-colors">Политика конфиденциальности</a>
               <a href="#" className="hover:text-white transition-colors">Публичная оферта</a>
             </div>
@@ -543,9 +543,9 @@ const Index = () => {
       </footer>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="sm:max-w-[500px]">
+        <DialogContent className="sm:max-w-[500px] max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle className="text-2xl font-bold text-[#1A1F2C]">
+            <DialogTitle className="text-xl sm:text-2xl font-bold text-[#1A1F2C]">
               {dialogTitles[dialogType]}
             </DialogTitle>
             <DialogDescription className="text-gray-600">
@@ -596,7 +596,7 @@ const Index = () => {
             </div>
             <Button
               type="submit"
-              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-lg py-6 rounded-full"
+              className="w-full bg-[#9b87f5] hover:bg-[#7E69AB] text-white text-base sm:text-lg py-5 sm:py-6 rounded-full"
             >
               Отправить заявку
             </Button>
